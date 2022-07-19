@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid d-flex flex-row-reverse">
+    <a class="navbar-brand" href="/">Щебетатель</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <div class="container-fluid d-flex flex-row">
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {{#if userName}}
+         <li class="nav-item">
+          <span class="nav-link text-muted" href="">Welcome, {{userName}}</span>
+        </li>
+        {{/if}}
+
+        <li class="nav-item">
+          <a class="nav-link active text-success" aria-current="page" href="/">Главная</a>
+        </li>
+
+        {{#unless userId}}
+        <li class="nav-item">
+          <a id="registrationButton" class="nav-link text-success" href="/register">Регистрация</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-success" href="/login">Войти</a>
+        </li>
+        {{/unless}}
+
+
+        {{#if userId}}
+        <li class="nav-item">
+          <a id="addPostButton" class="nav-link text-success" href="/addPost">Написать пост</a>
+        </li>
+         <li class="nav-item">
+          <a id="lk" class="nav-link text-success" href="/lk">Личный кабинет</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-success" href="/logout">Выйти</a>
+        </li>
+        {{/if}}
+        
+   
+        {{!-- <form name="search" class="nav-link" id="searchForm">
+          <input type="text" name="name" id="productName" placeholder="Название продукта">
+          <button type="submit" class="btnSearch btn btn-outline-success">Искать</button>
+        </form> --}}
+        
+        
+        
+      </ul>
+    </div>
+     </div>
+   
+  </div>
+</nav>

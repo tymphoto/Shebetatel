@@ -1,0 +1,25 @@
+<div class="container mt-2" id="userPosts">
+  {{#each posts}}
+  <div class="d-flex flex-column-reverse" >
+    <div class="p-2 d-flex justify-content-center">
+      <div class="posts mb-0 mt-1 bg-light" id="div-{{id}}">
+        <div class="d-flex justify-content-center mt-0">
+          <img src={{this.image}} alt="post_image" class="postImg">
+        </div>
+        <div class="text-muted post-text mb-0 mt-1">{{this.User.name}} щебечет:</div>
+        <div class="text-muted post-text mt-0">{{this.text}}</div>
+        <div class="text-muted update-text">Последнее обновление:{{this.updatedAt}}</div>
+        <div><button class="btn btn-secondary btn-sm delete-button" type="click" data-delete={{id}}>x</button></div>
+         <div>
+        <button class="btn btn-secondary btn-sm ml-1" type="submit" data-update={{id}} onclick="window.location.href='/edit/{{id}}'">Изменить</button>
+        </div>
+        
+      </div>
+     
+      
+
+    </div>
+  </div>
+  {{/each}}
+</div>
+

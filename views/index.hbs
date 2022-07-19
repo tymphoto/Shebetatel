@@ -1,0 +1,31 @@
+{{#unless userId}}
+  <div class="d-flex justify-content-center mt-0">
+    <div class="header mt-5">
+        <h6>Чтобы отправить свой щебет, пожалуйста зарегестрируйтесь</h6>
+    </div>
+  </div>
+{{/unless}}
+
+
+<div class="container mt-2">
+  {{#each posts}}
+  <div class="d-flex flex-column-reverse" id="posts">
+    <div class="p-2 d-flex justify-content-center">
+      <div class="posts mb-0 mt-1 bg-light">
+        <div class="d-flex justify-content-center mt-0">
+          <img src={{this.image}} alt="post_image" class="postImg">
+        </div>
+        <p class="text-muted post-text mb-0 mt-1">{{this.User.name}} щебечет:</p>
+        <p class="text-muted post-text mt-0">{{this.text}}</p>
+        <p class="text-muted update-text">Последнее обновление:{{this.updatedAt}}</p>
+        {{!-- <button class="btn btn-secondary btn-sm delete-button" type="click" data-delete={{id}}>Съесть</button></li> --}}
+        {{!-- <button class="btn btn-secondary btn-sm delete-button" type="click" data-update={{id}}>Изменить</button></li> --}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
+
+
+
+

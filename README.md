@@ -11,4 +11,4 @@
 
 5) npm start 
 
-6) Enjoy =)
+6) Enjoy and contact me =)

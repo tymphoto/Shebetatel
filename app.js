@@ -39,4 +39,4 @@ app.use(checkSession);
 
 app.use('/', indexRouter);
 
-app.listen(PORT, () => console.log('Server work, exam almost done =)', PORT));
+app.listen(PORT, () => console.log('Server work on', PORT));
